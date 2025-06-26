@@ -2,6 +2,10 @@
 
 #Set variables
 set -e
+
+# ✅ Add default value for branch name if not passed
+BRANCH_NAME=${BRANCH_NAME:-latest}
+
 COMMIT=$(git rev-parse HEAD)
 APP_NAME="nodeapp-$BRANCH_NAME"
 NGINX_NAME="nginx-$BRANCH_NAME"
